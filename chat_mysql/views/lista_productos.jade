@@ -1,0 +1,14 @@
+doctype 5
+html
+	head
+		title Lista de Productos
+	body
+		h2 Lista de Productos
+		hr
+		a(href='/productos/add') Crear Producto
+		hr
+
+		ul
+			each producto in productos
+				li
+					a(href='/productos/view/#{producto.id_prod}') #{producto.nom_prod}
